@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:id="@+id/relativeLayout1"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+    <ffimageloading.views.ImageViewAsync
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:padding="5dp"
+        android:id="@+id/ImageCoins"
+        android:maxHeight="70dp"
+        android:maxWidth="130dp"
+        android:minHeight="70dp"
+        android:minWidth="130dp" />
+    <ffimageloading.views.ImageViewAsync
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:id="@+id/logo_count_star"
+        android:maxHeight="20dp"
+        android:maxWidth="100dp"
+        android:minHeight="20dp"
+        android:minWidth="100dp"
+        android:layout_alignParentRight="true" />
+    <TextView
+        android:id="@+id/name"
+        android:text="text"
+        android:textColor="#515A5A"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true" />
+    <TextView
+        android:id="@+id/_suma"
+        android:text="Сумма первого займа"
+        android:textColor="#515A5A"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp" />
+    <TextView
+        android:id="@+id/_time_credit"
+        android:text="Срок кредита"
+        android:textColor="#515A5A"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110dp" />
+    <TextView
+        android:id="@+id/_time_check"
+        android:text="Рассмотрение"
+        android:textColor="#515A5A"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="140dp" />
+    <TextView
+        android:id="@+id/_pereplata"
+        android:text="Переплата за 1000 грн"
+        android:textColor="#515A5A"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="170dp" />
+    <TextView
+        android:id="@+id/suma"
+        android:text="text"
+        android:textColor="#239B56"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="80dp" />
+    <TextView
+        android:id="@+id/time_credit"
+        android:text="text"
+        android:textColor="#239B56"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="110dp" />
+    <TextView
+        android:id="@+id/time_check"
+        android:text="text"
+        android:textColor="#239B56"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="140dp" />
+    <TextView
+        android:id="@+id/pereplata"
+        android:text="text"
+        android:textColor="#239B56"
+        android:textSize="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="170dp" />
+    <TextView
+        android:id="@+id/information"
+        android:text="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#515A5A"
+        android:textSize="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+    <appcreditoff.CustomButton
+        android:id="@+id/ButtonCredit"
+        android:background="@drawable/buttonborder"
+        android:textColor="#FDFEFE"
+        android:text="ОФОРМИТЬ КРЕДИТ"
+        android:textSize="17dp"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp" />
+</RelativeLayout>

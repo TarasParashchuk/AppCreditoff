@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:local="http://schemas.android.com/apk/res-auto">
+  <item
+       android:id="@+id/menu_summ"
+       local:showAsAction="always"
+       android:title="СУММЕ КРЕДИТА" />
+  <item
+       android:id="@+id/menu_time"
+       local:showAsAction="always"
+       android:title="СРОКУ" />
+  <item
+       android:id="@+id/menu_mark"
+       local:showAsAction="always"
+       android:title="РЕЙТИНГУ" />
+  <item
+       android:id="@+id/menu_update"
+       local:showAsAction="always"
+       android:icon="@mipmap/ic_refresh_white_48dp" />
+</menu>
