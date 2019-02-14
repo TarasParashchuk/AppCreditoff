@@ -10,8 +10,7 @@ namespace AppCreditoff.MainFunction
 {
     public class MainOperation
     {
-        private const string main_url = @"https://dengi-bistro.com.ua/mobile.html";
-        private const string logo_url = @"https://dengi-bistro.com.ua/";
+        private const string main_url = @"https://dengi-bistro.com.ua/";
         private HelpFunction helpFunction;
 
         public MainOperation()
@@ -67,7 +66,7 @@ namespace AppCreditoff.MainFunction
             var information_credit = new string[5];
             var company_name = string.Empty;
             var url = string.Empty;
-            var company_logo = logo_url;
+            var company_logo = main_url;
             var count_main = 0;
             var List_company = new List<Model_Creditoff>();
 
@@ -78,7 +77,7 @@ namespace AppCreditoff.MainFunction
 
             foreach (var main_inf in node)
             {
-                company_logo = logo_url + main_inf.SelectSingleNode("//img[@class='company_logo']").Attributes["src"].Value;
+                company_logo = main_url + main_inf.SelectSingleNode("//img[@class='company_logo']").Attributes["src"].Value;
                 company_name = main_inf.SelectSingleNode("//p[@class='comp_name']").InnerText;
                 url = main_inf.SelectSingleNode("//a[@class='getcredit']").Attributes["data-href"].Value;
 
@@ -88,7 +87,7 @@ namespace AppCreditoff.MainFunction
                 if (index != -1)
                     company_name = company_name.Insert(index + 1, "\n");
 
-                var inf_credit = doc.DocumentNode.SelectSingleNode("//div[2]/div[1]/div/div/div/div/div/div[2]/div[1]");
+                var inf_credit = doc.DocumentNode.SelectSingleNode("//*[@id=\"company_list\"]/div[1]/div/div/div/div/div/div[2]/div[1]");
 
                 for (var i = 0; i < inf_credit.ChildNodes.Count / 2; i++)
                 {
@@ -103,9 +102,9 @@ namespace AppCreditoff.MainFunction
                     }
                 }
 
-                var str = doc.GetElementbyId("pjax-landing").SelectSingleNode("//div[@class='company_stars']").InnerHtml;
+                var str = doc.DocumentNode.SelectSingleNode("//*[@id=\"company_list\"]/div[1]/div/div/div/div/div/div[1]/div").InnerHtml;
                 foreach (Match m in Regex.Matches(str, "fa fa-star star_full")) count++;
-                information_credit[4] = doc.GetElementbyId("pjax-landing").SelectSingleNode("//div[@class='comp_message']").InnerText;
+                information_credit[4] = doc.DocumentNode.SelectSingleNode("//*[@id=\"company_list\"]/div[1]/div/div/div/div/div/div[2]/div[2]").InnerText;
                 var sum = Convert.ToInt32(information_credit[0].Remove(information_credit[0].LastIndexOf("г")).TrimEnd());
 
                 var items = new Model_Creditoff(count_main, company_logo, company_name, sum, information_credit[1], information_credit[2], information_credit[3], information_credit[4], count, url);
