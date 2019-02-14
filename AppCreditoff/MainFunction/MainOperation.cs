@@ -18,7 +18,7 @@ namespace AppCreditoff.MainFunction
             helpFunction = new HelpFunction();
         }
 
-        public List<Model_Creditoff> Sort_Sum()
+        public List<Model_Creditoff> Sort_Suma()
         {
             return helpFunction.Open_Favorites().OrderByDescending(u => u.suma).ToList();
         }
